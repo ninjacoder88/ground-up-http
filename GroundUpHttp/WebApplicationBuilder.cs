@@ -1,7 +1,14 @@
-public static class WebApplicationBuilder
+public class WebApplicationBuilder
 {
-    public static WebApplication Build()
+    public WebApplicationBuilder(string[] args)
+    {
+        _args = args;
+    }
+
+    public WebApplication Build()
     {
         return new WebApplication();
     }
+
+    private readonly string[] _args;
 }

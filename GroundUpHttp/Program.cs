@@ -1,13 +1,14 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
 
-WebApplication app = WebApplicationBuilder.Build();
+// builder.Services;
+// builder.Configuration;
+// builder.Logging;
+// builder.WebHost;
+// builder.Host;
+// builder.Metrics;
+
+WebApplication app = builder.Build();
 
 app.UseLogging();
-
-app.Use(async (context, next) =>
-{
-    await next(context);
-});
 
 app.Run();
