@@ -1,6 +1,8 @@
 using System.Text;
 
-public class RequestHandler
+namespace GroundUpHttp.Internal;
+
+internal sealed class RequestHandler
 {
     public RequestHandler(IEnumerable<Func<HttpContext, RequestDelegate, Task>> enumerable, Stream stream)
     {

@@ -1,9 +1,11 @@
 using System.Net;
 using System.Net.Sockets;
+using GroundUpHttp.Internal;
+
+namespace GroundUpHttp;
 
 public class WebApplication
 {
-
     public WebApplication()
     {
     }

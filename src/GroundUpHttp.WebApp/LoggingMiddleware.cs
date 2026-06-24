@@ -1,3 +1,5 @@
+namespace GroundUpHttp.WebApp;
+
 public static class LoggingMiddleware
 {
     public static void UseLogging(this WebApplication app)
