@@ -7,6 +7,7 @@ public static class LoggingMiddleware
         app.Use(async (context, next) =>
         {
             // request
+            IRequestHandler? requestHandler = context.Request.Services.GetService<IRequestHandler>();
 
             await next(context);
 

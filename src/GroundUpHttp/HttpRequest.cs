@@ -1,3 +1,6 @@
+using GroundUpHttp.Interfaces;
+using GroundUpHttp.Internal;
+
 namespace GroundUpHttp;
 
 public class HttpRequest
@@ -8,6 +11,7 @@ public class HttpRequest
         Target = target;
         Protocol = protocol;
         Headers = headers;
+        Services = new InternalServiceCollection();
     }
 
     public string Method {get;}
@@ -15,4 +19,5 @@ public class HttpRequest
     public string Protocol {get;}
     public Dictionary<string, string> Headers {get;}
     public Stream? Body {get;set;}
+    public IServiceCollection Services {get;}
 }
